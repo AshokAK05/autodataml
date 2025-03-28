@@ -178,6 +178,6 @@ if uploaded_file is not None:
         st.write(f"### Dataset Summary: {summary}")
         generate_and_display_graphs(df)
         best_model, best_score = train_and_test(df)
-        st.write(f"### Best Model: {best_model._class.name_}")
+        st.write(f"### Best Model: {best_model.__class__.__name__}")
         st.write(f"### Model Score: {best_score}")
         generate_streamlit_ui(df, best_model)
